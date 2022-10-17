@@ -17,6 +17,9 @@ nav {
 }
 
 .nombre {
+    display: grid;
+    align-self: center;
+
     padding: 10px;
     margin: 5px 10px 5px 10px;
 
@@ -33,7 +36,7 @@ nav {
 .nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+
     list-style: none;
 
 
@@ -96,6 +99,7 @@ h1 {
     font-size: 16px;
     margin: 10px;
     padding: 12px;
+    animation: slide-in-right 1.5s linear both;
 
 }
 
@@ -169,12 +173,13 @@ h1 {
     text-decoration: none;
     color: red;
 }
+
 /* AYUDA: por alguna razón en algunas páginas como esta si a h3 no le agrego magin-bottom el footer se separa del fondo de la misma dejando un espacio en blanco */
 
 
 /* DETALLETOSTADA.HTML */
 
-.container{
+.container {
     width: 70%;
     margin: 10%;
     display: flex;
@@ -182,27 +187,31 @@ h1 {
     justify-content: center;
     text-align: center;
 }
+
 .detalle-producto {
-    width:35%;
-    display:flex;
+    width: 35%;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top:3%;
-    border:solid rgb(228, 219, 219) 2px;
+    margin-top: 3%;
+    border: solid rgb(228, 219, 219) 2px;
     border-radius: 5px;
     padding: 1%;
 }
+
 .nombre-producto {
     color: red;
 }
+
 .imagen-detail {
-    width:50vh;
-    height:50vh;
-    margin-top:15%;
+    width: 50vh;
+    height: 50vh;
+    margin-top: 15%;
     padding: 5%;
-    display:flex;
+    display: flex;
     align-items: center;
 }
+
 .seccion {
     margin: 10%;
 }
@@ -210,6 +219,7 @@ h1 {
 .seccion h2 {
     margin-top: 20%;
 }
+
 .button {
     display: flex;
     align-items: center;
@@ -219,52 +229,106 @@ h1 {
 /* FOOTER */
 
 
-footer {
+.footer {
     display: block;
-    background-color: rgba(0, 0, 0, 0.699);
+    display: grid;
+    height: 40vh;
+    grid-column: repeat(6, 1fr);
+    grid-row: repeat(1, 1fr);
+    grid-template-areas:
+        "name box box-1 box-2 box-3 box-4"
+    ;
+    gap: 5px;
+    background-color: rgba(0, 0, 0, 0.712);
+
+
+}
+
+.footer-nombre {
+    display: grid;
+    align-self: center;
+    background-color: rgb(211, 224, 236);
+    padding: 10px;
+    border: solid rgb(32, 77, 2);
+    border-radius: 45%;
+    margin: 5px;
+
+}
+
+.footer-nombre a {
+    text-decoration: none;
+    color: rgb(9, 12, 9);
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Lobster', serif;
 }
 
 .footer h4 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 20px 20px;
-    padding: 20px;
+    margin-top: 50px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.footer div ul li {
+    list-style: none;
 
 }
 
 .box {
+    grid-area: box;
+
+}
+
+.box-1 {
+    grid-area: box-1;
+
+}
+
+.box-2 {
+    grid-area: box-2;
+
+}
+
+.box-3 {
+    grid-area: box-3;
+
+}
+
+.box-4 {
     display: flex;
     flex-direction: row;
-    margin-left: 30px;
-}
-
-.box1 ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 30px;
-    margin: 1px;
-}
-
-.row1__redes {
-    margin-top: 3px;
-    font-size: 20px;
-    font-family: 'Merriweather', serif;
-}
-
-.box2 {
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 4px;
-    margin: 2px 2px;
+    margin-right: 10px ;
+    grid-area: box-4;
+}
+.row__redes {
+    margin-top: 10px;
+    text-align: center;
+
+}
+.row1__redes {
+    margin-top: 4px;
+    text-align: center;
 }
 
-.row1__link img {
+.row2__redes {
+margin-top: 4px;
+text-align: center;
+}
+.row3__redes {
+    text-align: center;
+    margin-top: 4px;
+
+}
+
+.row4__link img {
     width: 40px;
     height: 40px;
     background-color: white;
     border: 2px solid rgb(255, 255, 255);
 }
 
-@media (max-width: 768px) {
-    
-}
+@media (max-width: 768px) {}
