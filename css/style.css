@@ -75,6 +75,9 @@ nav {
 main {
     background-color: rgb(248, 240, 240);
 }
+.main {
+
+}
 
 h1 {
     text-align: center;
@@ -99,9 +102,11 @@ h1 {
     font-size: 16px;
     margin: 10px;
     padding: 12px;
-    animation: slide-in-right 1.5s linear both;
+
 
 }
+
+
 
 .info-product {
     border: 2px solid rgb(245, 185, 215);
@@ -228,7 +233,9 @@ h1 {
 
 /* FOOTER */
 
+footer {
 
+}
 .footer {
     display: block;
     display: grid;
@@ -240,8 +247,6 @@ h1 {
     ;
     gap: 5px;
     background-color: rgba(0, 0, 0, 0.712);
-
-
 }
 
 .footer-nombre {
@@ -301,23 +306,26 @@ h1 {
     flex-direction: row;
     align-items: center;
     gap: 4px;
-    margin-right: 10px ;
+    margin-right: 10px;
     grid-area: box-4;
 }
+
 .row__redes {
     margin-top: 10px;
     text-align: center;
 
 }
+
 .row1__redes {
     margin-top: 4px;
     text-align: center;
 }
 
 .row2__redes {
-margin-top: 4px;
-text-align: center;
+    margin-top: 4px;
+    text-align: center;
 }
+
 .row3__redes {
     text-align: center;
     margin-top: 4px;
@@ -332,3 +340,84 @@ text-align: center;
 }
 
 @media (max-width: 768px) {}
+
+
+
+/* movil */
+@media (max-width: 576px) {
+
+    /* HEADER */
+
+
+    header {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+        "nombre cart nav"
+        ;
+
+    
+    }
+
+    .nombre {
+        grid-area: nombre;
+    }
+    .cart {
+        grid-area: cart;
+    }
+
+    .nombre a {
+        text-decoration: none;
+        color: rgb(77, 62, 62);
+        font-size: 40px;
+        font-style: italic;
+        font-family: 'Lobster', serif;
+    }
+
+    .nav {
+        height: 80px;
+        width: 100%;
+        background-color: rgba(37, 100, 23, 0.993);
+        grid-area: nav;
+    }
+
+    .nav ul {
+        float: right;
+        margin-right: 40px;
+
+    }
+
+    .nav li {
+        display: inline-block;
+        margin: 0 8px;
+        line-height: 30px;
+
+    }
+
+    .nav a {
+        font-size: 18px;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        padding: 7px 10px;
+        border-radius: 3px;
+    }
+
+    a.nav__link,a:hover {
+        border: 1px solid white;
+        transition: .5s;
+
+    }
+    .icon {
+        border: 12px solid;
+    }
+    .footer {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas:
+        "nombre-footer box-1 box-3"
+        "box-4 box box-2" 
+        ;
+        height: 50vh;
+    }
+}
