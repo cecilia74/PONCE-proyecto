@@ -572,32 +572,28 @@ h1 {
     }
 
     .nav {
-        height: 80px;
+
         background-color: rgba(69, 165, 48, 0.993);
         grid-area: nav;
+        width: 40vh;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-template-areas:
-            "nav__link"
-            "nav__link"
-            "nav__link"
-            "nav__link"
+            "nav__link nav__link"
+            "nav__link nav__link"
         ;
+        gap: 0px;
     }
 
     .nav ul {
         float: right;
         margin-right: 30px;
-        position: relative;
 
     }
 
     .nav li {
-
-        margin: 0 8px;
-        line-height: 30px;
-
+        margin: 0 4px;
     }
 
     .nav a {
