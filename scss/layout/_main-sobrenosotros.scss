@@ -1,0 +1,27 @@
+.nos1 {
+	font-family: 'Noto Sans TC', sans-serif;
+	margin: auto;
+	padding: 20px;
+}
+.nos2 {
+	font-family: 'Noto Sans TC', sans-serif;
+	margin: auto;
+	padding: 20px;
+}
+.videos {
+	div {
+		display: flex;
+		justify-content: center;
+		margin: 10px;
+	}
+}
+.vid1 {
+	iframe {
+		width: 600px;
+	}
+}
+.vid2 {
+	video {
+		width: 600px;
+	}
+}

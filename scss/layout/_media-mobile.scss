@@ -1,0 +1,113 @@
+@media (max-width:576px) {
+    /* HEADER */
+/* INDEX */
+/* FOOTER   */
+header {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-areas: "nombre cart nav";
+	background-color: rgb(221, 180, 127);
+}
+.nombre {
+	grid-area: nombre;
+	a {
+		text-decoration: none;
+		color: rgb(158, 73, 73);
+		font-size: 40px;
+		font-style: italic;
+		font-family: 'Lobster', serif;
+	}
+}
+.cart {
+	grid-area: cart;
+	align-self: center;
+	a {
+		img {
+			height: 50px;
+			width: 50px;
+		}
+	}
+}
+.nav {
+	background-color: rgba(69, 165, 48, 0.993);
+	grid-area: nav;
+	width: 40vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: "nav__link nav__link" "nav__link nav__link";
+	gap: 0px;
+	ul {
+		float: right;
+		margin-right: 30px;
+	}
+	li {
+		margin: 0 4px;
+	}
+	a {
+		font-size: 18px;
+		text-transform: uppercase;
+		border: 1px solid transparent;
+		padding: 7px 10px;
+		border-radius: 3px;
+	}
+}
+a.nav__link {
+	border: 1px solid white;
+	transition: .5s;
+}
+a {
+	&:hover {
+		border: 1px solid white;
+		transition: .5s;
+	}
+}
+.main {
+	div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+.card {
+	width: 200px;
+	height: 400px;
+	justify-content: space-between;
+	background-color: rgb(248, 225, 194);
+	border: 3px solid rgb(9, 31, 9);
+	text-align: center;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 15px;
+	margin-right: 20px;
+	a {
+		text-decoration: none;
+		border: 2px solid rgb(221, 115, 66);
+		background-color: rgb(230, 106, 69);
+		color: rgb(255, 255, 255);
+		margin: 5px 10px 2px;
+	}
+	img {
+		width: 140px;
+		height: 200px;
+	}
+}
+.info-product {
+	border: 2px solid rgb(245, 185, 215);
+	margin: 5px;
+	padding: 10px;
+	p {
+		margin: 8px;
+	}
+}
+.footer {
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: "nombre-footer box-1 box-3" "box-4 box box-2";
+	height: 55vh;
+}
+.box-4 {
+	justify-content: center;
+}
+
+}

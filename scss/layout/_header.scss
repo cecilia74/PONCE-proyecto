@@ -1,0 +1,60 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(76, 202, 51, 0.993);
+}
+
+nav {
+    align-self: center;
+}
+
+.nombre {
+    display: grid;
+    align-self: center;
+
+    padding: 10px;
+    margin: 5px 10px 5px 10px;
+
+}
+
+.nombre a {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    font-style: italic;
+    font-family: 'Lobster', serif;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav__link {
+
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.678);
+    border-radius: 9px;
+    margin-top: 15px;
+    padding: 10px;
+
+
+    text-decoration: none;
+    color: rgb(240, 230, 230);
+    font-family: 'Suez One', serif;
+    font-size: 20px;
+
+}
+
+.nav__link:hover {
+    background-color: rgba(119, 226, 167, 0.219);
+}
+
+.cart a img {
+    height: 20vh;
+    margin: 5px;
+    padding: 2px 2px;
+}

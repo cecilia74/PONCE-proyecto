@@ -1,0 +1,74 @@
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoom {
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+main {
+    background-color: rgb(248, 240, 240);
+    animation-name: slide-in-bottom;
+    animation-duration: 1s;
+}
+
+h1 {
+    text-align: center;
+}
+
+.title {
+    margin: auto;
+    padding: 5vh;
+}
+
+.card {
+    display: flex;
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(248, 225, 194);
+    border: 3px solid rgb(9, 31, 9);
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+
+    &:hover {
+        animation: zoom .5s forwards;
+    }
+
+    a {
+        text-decoration: none;
+        border: 2px solid rgb(221, 115, 66);
+        background-color: rgb(230, 106, 69);
+        color: rgb(255, 255, 255);
+        margin: 5px 10px 2px;
+    }
+
+    img {
+        width: 245px;
+        height: 245px;
+    }
+}
+
+.info-product {
+    border: 2px solid rgb(245, 185, 215);
+    margin: 5px;
+    padding: 8px;
+
+    p {
+        margin: 5px;
+    }
+}
