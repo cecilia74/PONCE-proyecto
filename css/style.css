@@ -65,7 +65,7 @@ nav {
 .nav-bar {
   display: none; }
 
-button {
+  .navbar-toggler {
   display: none; }
 
 main {
