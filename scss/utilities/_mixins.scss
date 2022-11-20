@@ -3,3 +3,10 @@
     grid-template-columns: $columns;
     grid-template-rows: $row;
 }
+
+@mixin flex ($direction,$justify,$aling) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aling;
+}
